@@ -1,0 +1,819 @@
+
+faça um site/app responsivo para a prevenção de acidentes ofídicos na região do
+faça um site/app responsivo para a prevenção de acidentes ofídicos na região do iguaçu, interior do paraná com base no pdf em anexo e nas informações deste site do ministério da saúde: https://miniapps.saude.gov.br/animais-peconhentos/
+
+
+ONE Smart
+pdf
+vade-mecum-universitario-2024-ultima-ed
+pdf
+Guia_Animais_Peconhentos.pdf
+.
+
+
+ONE Smart
+Vou analisar o PDF anexo e o site do Ministério da Saúde para montar o site com conteúdo completo e confiável.
+
+O guia do PDF está bem completo. O site do Ministério da Saúde é um mini-app com seções (Emergência, Primeiros Socorros, Animais, Guia de Vigilância, Rede de Saúde) — vou explorar as subpáginas para capturar mais orientações oficiais.Tenho todo o conteúdo necessário: o guia regional detalhado (cobras, aranhas, escorpiões, lagartas e demais animais da região do Iguaçu, com prevenção e primeiros socorros) e as orientações oficiais do Ministério da Saúde (SAMU 192, Bombeiros 193, CIATox, rede SUS).
+
+Agora vou montar o site/app responsivo com tudo isso integrado.
+
+
+Esta etapa foi interrompida antes de terminar.
+
+faça uma spa com este tema.
+A SPA deverá possuir, no mínimo:
+
+identidade/nome do produto;
+interface coerente com o serviço proposto;
+navegação entre os principais conteúdos;
+pelo menos uma funcionalidade relacionada ao serviço;
+estrutura que permita sua evolução durante o semestre.
+Não é obrigatório desenvolver um backend.
+
+Quando necessário, podem ser utilizados:
+
+dados estáticos;
+arquivos JSON;
+mocks;
+APIs públicas.
+A aplicação ainda não precisa estar publicada na Internet nesta atividade.
+
+
+ONE Smart
+
+Iguaçu Seguro — Prevenção de Acidentes com Animais Peçonhentos
+Página interativa
+Criado com
+A SPA Iguaçu Seguro está pronta — um guia digital de prevenção de acidentes com animais peçonhentos na Região do Iguaçu, com conteúdo do guia do Projeto Onças do Iguaçu (ICMBio/WWF) e do app Animais Peçonhentos do Ministério da Saúde.
+
+Como atende aos requisitos da atividade:
+
+Identidade/nome do produto — "Iguaçu Seguro", com logotipo (escudo + cobra), tagline e paleta visual coerente com o serviço (verdes da mata, âmbar de alerta, vermelho só para emergência).
+Navegação entre conteúdos — router SPA real por hash em JavaScript puro (#/inicio, #/emergencia, #/socorros, #/prevencao, #/animais, #/quiz, #/soro, #/rede), com menu ativo destacado e suporte aos botões voltar/avançar do navegador, sem recarregar a página.
+Funcionalidade relacionada ao serviço — várias: busca em tempo real e filtro por grupo na galeria de 19 animais da região, quiz "Teste seus conhecimentos" com placar salvo, botões de ligação direta (SAMU 192, Bombeiros 193, Hospital Municipal Padre Germano Lauck), modo claro/escuro e barra de emergência fixa no mobile.
+Estrutura para evolução no semestre — código modular em seções comentadas (Dados, Router, Views, Componentes, Funcionalidades), animais em constantes tipo JSON prontas para virar fetch de API, e comentários TODO com ideias de expansão.
+Sem backend — funciona 100% com dados estáticos embutidos, exatamente como permitido na atividade.
+Destaques do conteúdo: primeiros socorros (o que fazer e o que nunca fazer), prevenção em quatro cenários (mato, casa/quintal, aranhas/escorpiões, sapos), fichas completas das cobras da região (jararaca, cascavel, coral, urutu e outras), produção do soro antiofídico em 6 passos e a rede de atendimento com o hospital de referência para cobras e Lonomia em Foz do Iguaçu.
+
+Caminhos naturais de evolução durante o semestre:
+
+Migrar os dados dos animais para um arquivo JSON consumido via fetch.
+Adicionar mapa/geolocalização da rede de saúde e alertas sazonais (Lonomia entre novembro e abril).
+Transformar em PWA para funcionar offline em área rural.
+Se quiser, posso: ajustar nome, cores ou conteúdo de alguma seção; adicionar mais perguntas ao quiz; ou detalhar a arquitetura do código para a documentação da disciplina.
+
+crie o  readme e me gere o código para publicação no github
+
+
+ONE Smart
+Segue o projeto completo pronto para publicar no GitHub: estrutura de pastas, README.md e o código-fonte integral da SPA index.html (autocontido, sem dependências).
+
+📁 Estrutura do repositório
+iguacu-seguro/
+├── index.html      # SPA completa (HTML + CSS + JS)
+└── README.md       # Documentação do projeto
+📄 README.md
+codigo-gerado.md
+Código markdown
+🌐 Publicação no GitHub Pages
+Faça push do projeto para um repositório no GitHub;
+Em Settings → Pages, em Source, selecione Deploy from a branch;
+Escolha a branch main e a pasta / (root);
+Acesse https://SEU-USUARIO.github.io/iguacu-seguro/.
+🧩 Estrutura do código (evolução no semestre)
+O index.html é organizado em seções comentadas:
+
+// ===== DADOS =====          → ANIMAIS e QUIZ (constantes tipo JSON)
+// ===== COMPONENTES =====    → funções que geram HTML (cards, accordion…)
+// ===== VIEWS =====          → uma função por rota
+// ===== ROUTER =====         → roteamento por hash
+// ===== FUNCIONALIDADES ===== → tema, quiz, busca, menu, back-to-top
+Roadmap sugerido:
+
+ Migrar dados dos animais para animais.json consumido via fetch;
+ Mapa/geolocalização da rede de saúde;
+ Alertas sazonais (ex.: Lonomia entre novembro e abril);
+ Transformar em PWA (funcionamento offline para área rural).
+📚 Fontes
+Projeto Onças do Iguaçu — Parque Nacional do Iguaçu (ICMBio / WWF-Brasil / CENAP);
+Ministério da Saúde — aplicativo 
+Animais Peçonhentos (conteúdo sob licença CC BY-ND 3.0 BR);
+CIATox — Centros de Informação e Assistência Toxicológica.
+📄 Licença
+Código sob licença MIT. Conteúdo informativo baseado nas fontes oficiais citadas acima.
+
+
+## 💻 index.html (código completo da SPA)
+
+```html
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Iguaçu Seguro — Guia de prevenção de acidentes com animais peçonhentos na Região do Iguaçu.">
+<title>Iguaçu Seguro — Prevenção de Acidentes com Animais Peçonhentos</title>
+<style>
+/* ===== TEMA ===== */
+:root{
+  --verde-escuro:#14532d; --verde:#16a34a; --ambar:#f59e0b; --vermelho:#dc2626;
+  --bg:#f6faf7; --card:#ffffff; --texto:#1e293b; --texto-suave:#475569;
+  --borda:#e2e8f0; --sombra:0 2px 10px rgba(0,0,0,.07);
+}
+[data-theme="dark"]{
+  --bg:#0f172a; --card:#1e293b; --texto:#f1f5f9; --texto-suave:#94a3b8;
+  --borda:#334155; --sombra:0 2px 10px rgba(0,0,0,.4);
+}
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;background:var(--bg);color:var(--texto);line-height:1.6;transition:background .3s,color .3s}
+a{color:var(--verde)}
+h1,h2,h3{line-height:1.25}
+h2{color:var(--verde-escuro);margin-bottom:1rem;font-size:1.5rem}
+[data-theme="dark"] h2{color:#4ade80}
+main{max-width:1000px;margin:0 auto;padding:1.2rem 1rem 6rem}
+section{animation:fade .35s ease}
+@keyframes fade{from{opacity:0;transform:translateY(8px)}to{opacity:1;transform:none}}
+
+/* ===== HEADER / NAV ===== */
+header{position:sticky;top:0;z-index:50;background:var(--verde-escuro);color:#fff;box-shadow:var(--sombra)}
+.nav{max-width:1000px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;padding:.7rem 1rem}
+.logo{display:flex;align-items:center;gap:.5rem;font-weight:800;font-size:1.1rem;color:#fff;text-decoration:none}
+.logo span{background:#fff;border-radius:50%;width:2.1rem;height:2.1rem;display:grid;place-items:center;font-size:1.1rem}
+#menuBtn{display:none;background:none;border:none;color:#fff;font-size:1.6rem;cursor:pointer}
+nav ul{display:flex;gap:.2rem;list-style:none;flex-wrap:wrap}
+nav a{color:#e8f5ee;text-decoration:none;padding:.45rem .7rem;border-radius:8px;font-size:.9rem;font-weight:600}
+nav a:hover{background:rgba(255,255,255,.15)}
+nav a.ativo{background:var(--verde);color:#fff}
+@media(max-width:820px){
+  #menuBtn{display:block}
+  nav{display:none;width:100%;background:var(--verde-escuro)}
+  nav.aberto{display:block}
+  nav ul{flex-direction:column;padding:.5rem}
+}
+
+/* ===== COMPONENTES ===== */
+.hero{background:linear-gradient(135deg,var(--verde-escuro),var(--verde));color:#fff;border-radius:16px;padding:2.2rem 1.5rem;text-align:center;margin-bottom:1.2rem}
+.hero h1{font-size:clamp(1.5rem,4vw,2.3rem);margin-bottom:.6rem}
+.hero p{max-width:640px;margin:0 auto 1rem;color:#e8f5ee}
+.alerta{background:#fef3c7;border:2px solid var(--ambar);color:#78350f;border-radius:12px;padding:1rem 1.2rem;font-weight:600;margin:1rem 0}
+[data-theme="dark"] .alerta{background:#422006;color:#fde68a;border-color:var(--ambar)}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:1rem;margin:1rem 0}
+.card{background:var(--card);border:1px solid var(--borda);border-radius:14px;padding:1.2rem;box-shadow:var(--sombra);transition:transform .2s}
+.card:hover{transform:translateY(-3px)}
+.card h3{margin-bottom:.4rem;font-size:1.05rem}
+.card .icone{font-size:1.8rem}
+.btn{display:inline-block;background:var(--verde);color:#fff;border:none;border-radius:10px;padding:.7rem 1.2rem;font-weight:700;cursor:pointer;text-decoration:none;font-size:1rem;transition:filter .2s}
+.btn:hover{filter:brightness(1.1)}
+.btn-vermelho{background:var(--vermelho)}
+.btn-contorno{background:transparent;color:var(--verde);border:2px solid var(--verde)}
+.btn-grande{font-size:1.15rem;padding:1rem 1.4rem;width:100%;text-align:center}
+.passos{counter-reset:p;list-style:none}
+.passos li{counter-increment:p;background:var(--card);border:1px solid var(--borda);border-radius:12px;padding:1rem 1rem 1rem 3.4rem;margin:.6rem 0;position:relative;box-shadow:var(--sombra)}
+.passos li::before{content:counter(p);position:absolute;left:.9rem;top:50%;transform:translateY(-50%);background:var(--verde);color:#fff;width:1.7rem;height:1.7rem;border-radius:50%;display:grid;place-items:center;font-weight:800}
+.nunca li{list-style:none;padding:.6rem 0 .6rem 2rem;position:relative;font-weight:600;color:var(--vermelho)}
+[data-theme="dark"] .nunca li{color:#f87171}
+.nunca li::before{content:"🚫";position:absolute;left:0}
+.sim li{list-style:none;padding:.35rem 0 .35rem 1.6rem;position:relative}
+.sim li::before{content:"✅";position:absolute;left:0}
+.tag{display:inline-block;background:var(--verde);color:#fff;border-radius:999px;font-size:.72rem;font-weight:700;padding:.15rem .6rem;margin-left:.4rem;vertical-align:middle}
+.tag.nao-peconhenta{background:#0ea5e9}
+.filtros{display:flex;gap:.5rem;flex-wrap:wrap;margin:.8rem 0 1rem}
+.filtros button{border:2px solid var(--verde);background:transparent;color:var(--verde);border-radius:999px;padding:.35rem .9rem;font-weight:700;cursor:pointer}
+.filtros button.ativo,.filtros button:hover{background:var(--verde);color:#fff}
+#busca{width:100%;padding:.75rem 1rem;border:2px solid var(--borda);border-radius:10px;font-size:1rem;background:var(--card);color:var(--texto)}
+details{background:var(--card);border:1px solid var(--borda);border-radius:12px;margin:.6rem 0;box-shadow:var(--sombra);overflow:hidden}
+summary{cursor:pointer;padding:1rem;font-weight:700;list-style:none;display:flex;align-items:center;gap:.6rem}
+summary::-webkit-details-marker{display:none}
+summary::after{content:"▾";margin-left:auto;transition:transform .2s}
+details[open] summary::after{transform:rotate(180deg)}
+details .corpo{padding:0 1rem 1rem}
+details ul{padding-left:1.2rem}
+.onde{margin-top:.6rem;background:#ecfdf5;border-left:4px solid var(--verde);padding:.6rem .8rem;border-radius:8px;font-size:.9rem}
+[data-theme="dark"] .onde{background:#052e1a}
+.quiz-op{display:block;width:100%;text-align:left;background:var(--card);border:2px solid var(--borda);border-radius:10px;padding:.9rem 1rem;margin:.5rem 0;font-size:1rem;cursor:pointer;color:var(--texto)}
+.quiz-op:hover{border-color:var(--verde)}
+.quiz-op.certa{border-color:var(--verde);background:#dcfce7}
+[data-theme="dark"] .quiz-op.certa{background:#14532d}
+.quiz-op.errada{border-color:var(--vermelho);background:#fee2e2}
+[data-theme="dark"] .quiz-op.errada{background:#450a0a}
+.placar{font-size:1.2rem;font-weight:800;text-align:center;margin:.8rem 0}
+.timeline{list-style:none;position:relative;padding-left:2.4rem}
+.timeline li{position:relative;padding:.7rem 0}
+.timeline li::before{content:attr(data-n);position:absolute;left:0;top:.7rem;background:var(--ambar);color:#78350f;width:1.8rem;height:1.8rem;border-radius:50%;display:grid;place-items:center;font-weight:800;font-size:.9rem}
+.timeline li::after{content:"";position:absolute;left:.85rem;top:2.6rem;bottom:-.4rem;width:2px;background:var(--borda)}
+.timeline li:last-child::after{display:none}
+.fonte{font-size:.8rem;color:var(--texto-suave);margin-top:.4rem}
+
+/* ===== EMERGÊNCIA FIXA / TOPO / FOOTER ===== */
+.barra-emergencia{display:none;position:fixed;bottom:0;left:0;right:0;z-index:60;background:var(--vermelho);padding:.55rem;gap:.5rem}
+.barra-emergencia a{flex:1;text-align:center;color:#fff;font-weight:800;text-decoration:none;background:rgba(0,0,0,.25);border-radius:8px;padding:.6rem}
+@media(max-width:820px){.barra-emergencia{display:flex}}
+#topo{position:fixed;right:1rem;bottom:4.2rem;z-index:60;background:var(--verde-escuro);color:#fff;border:none;border-radius:50%;width:2.8rem;height:2.8rem;font-size:1.2rem;cursor:pointer;display:none;box-shadow:var(--sombra)}
+footer{background:var(--verde-escuro);color:#cfe8d9;padding:1.6rem 1rem 5rem;text-align:center;font-size:.85rem}
+footer a{color:#86efac}
+:focus-visible{outline:3px solid var(--ambar);outline-offset:2px}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="nav">
+    <a class="logo" href="#/inicio"><span>🐍</span> Iguaçu Seguro</a>
+    <button id="menuBtn" aria-label="Abrir menu">☰</button>
+    <nav id="nav">
+      <ul>
+        <li><a href="#/inicio" data-rota="/inicio">Início</a></li>
+        <li><a href="#/emergencia" data-rota="/emergencia">Emergência</a></li>
+        <li><a href="#/socorros" data-rota="/socorros">Socorros</a></li>
+        <li><a href="#/prevencao" data-rota="/prevencao">Prevenção</a></li>
+        <li><a href="#/animais" data-rota="/animais">Animais</a></li>
+        <li><a href="#/quiz" data-rota="/quiz">Quiz</a></li>
+        <li><a href="#/soro" data-rota="/soro">Soro</a></li>
+        <li><a href="#/rede" data-rota="/rede">Rede</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<main id="app"></main>
+
+<div class="barra-emergencia" aria-label="Emergência">
+  <a href="tel:192">📞 SAMU 192</a>
+  <a href="tel:193">🚒 Bombeiros 193</a>
+</div>
+<button id="topo" aria-label="Voltar ao topo">↑</button>
+
+<footer>
+  <p><strong>Iguaçu Seguro</strong> — material informativo e educativo. Não substitui avaliação médica.</p>
+  <p>Fontes: Projeto Onças do Iguaçu (ICMBio/WWF-Brasil/CENAP) · App <a href="https://miniapps.saude.gov.br/animais-peconhentos/" target="_blank" rel="noopener">Animais Peçonhentos</a> — Ministério da Saúde (CC BY-ND 3.0 BR)</p>
+</footer>
+
+<script>
+// ============================================================
+// ===== DADOS =====
+// TODO(evolução): migrar para animais.json consumido via fetch.
+// ============================================================
+const ANIMAIS = [
+  {nome:"Jararaca", cientifico:"Bothrops jararaca", grupo:"cobras", icone:"🐍",
+   desc:"Marrom com rajas pretas, faixa marrom atrás do olho, língua preta e íris dourada/verde.",
+   sintomas:["Dor imediata, inchaço e calor no local","Manchas roxas e sangramento","Vômito, náusea e suor","Hipotensão, choque, bolhas e necrose","Insuficiência renal aguda","Picadas de filhotes podem não doer"],
+   onde:"Hospital Municipal de Foz do Iguaçu (24h)"},
+  {nome:"Jararacuçu", cientifico:"Bothrops jararacussu", grupo:"cobras", icone:"🐍",
+   desc:"Fêmeas maiores e amareladas, machos cinza. Camuflagem quase perfeita; o bote alcança a distância do próprio corpo.",
+   sintomas:["Mesmos do grupo Bothrops (jararaca/urutu)"],
+   onde:"Hospital Municipal de Foz do Iguaçu (24h)"},
+  {nome:"Urutu-cruzeiro", cientifico:"Bothrops alternatus", grupo:"cobras", icone:"🐍",
+   desc:"Uma das cobras mais venenosas do Brasil. Agressiva quando ameaçada e muito rápida; desenho de cruz na cabeça.",
+   sintomas:["Idem grupo Bothrops: dor, inchaço, sangramento, necrose e risco renal"],
+   onde:"Hospital Municipal de Foz do Iguaçu (24h)"},
+  {nome:"Cascavel", cientifico:"Crotalus durissus terrificus", grupo:"cobras", icone:"🐍",
+   desc:"Reconhecida pelo guizo/chocalho na cauda — cada anel é uma troca de pele, não um ano de vida.",
+   sintomas:["Dor ausente ou leve, inchaço discreto","Paralisia muscular e queda da pálpebra","Boca seca, visão turva ou dupla","Hemorragias discretas nas gengivas","Dor muscular e urina marrom/vermelha","Insuficiência renal aguda"],
+   onde:"Hospital Municipal de Foz do Iguaçu (24h)"},
+  {nome:"Coral", cientifico:"Micrurus sp", grupo:"cobras", icone:"🐍",
+   desc:"Anéis pretos, brancos, vermelhos e amarelos. Difícil diferenciar das falsas — nunca se aproxime.",
+   sintomas:["Podem ser tardios: dor discreta ou ausente","Formigamento e fraqueza muscular progressiva","Queda da pálpebra e salivação excessiva","Paralisia dos músculos do olho","Dificuldade de deglutir e respirar"],
+   onde:"Hospital Municipal de Foz do Iguaçu (24h)"},
+  {nome:"Cobra-verde / Cobra-cipó", cientifico:"Philodryas sp", grupo:"cobras", icone:"🌿",
+   desc:"Vive em árvores; morde em vez de picar (dentes pequenos no fundo da boca).",
+   sintomas:["Queimação, dor e sangramento local","Coceira e manchas vermelhas"],
+   onde:"Serviço de saúde mais próximo"},
+  {nome:"Caninana", cientifico:"Spilotes pullatus", grupo:"cobras", icone:"🌿", naoPeconhenta:true,
+   desc:"Cobra rápida, mas NÃO peçonhenta. Geralmente mansa, foge quando avistada.",
+   sintomas:["Não é perigosa — deixe-a seguir caminho"],
+   onde:"—"},
+  {nome:"Muçurana", cientifico:"Clelia sp", grupo:"cobras", icone:"🌿", naoPeconhenta:true,
+   desc:"Cobra-preta que se alimenta de outras cobras (jararacas, urutus, cascavéis). Não peçonhenta.",
+   sintomas:["Não é perigosa — aliada no controle de cobras venenosas"],
+   onde:"—"},
+  {nome:"Aranha-marrom", cientifico:"Loxosceles sp", grupo:"aranhas", icone:"🕷️",
+   desc:"Pouco agressiva; pica em defesa (roupas, sapatos, enxadas, pás).",
+   sintomas:["Picada quase imperceptível no início","Dor, inchaço enrijecido e vermelhidão","Bolha em 24–72h; necrose/escara em 7–12 dias","Febre, dor de cabeça e náuseas","Casos graves podem levar a coma"],
+   onde:"UPA — Unidade de Pronto Atendimento"},
+  {nome:"Aranha-armadeira", cientifico:"Phoneutria sp", grupo:"aranhas", icone:"🕷️",
+   desc:"Muito agressiva, hábitos noturnos; mais acidentes em abril e maio. Vive em bananeiras, folhagens, madeira e dentro de casas. Ataca com as patas dianteiras erguidas.",
+   sintomas:["Dor imediata que pode irradiar","Inchaço, queimação e suor","Marcas de dois pontos no local","Ereção peniana dolorosa (casos raros)","Choque e edema pulmonar"],
+   onde:"UPA — Unidade de Pronto Atendimento"},
+  {nome:"Aranha-de-jardim", cientifico:"Lycosa sp", grupo:"aranhas", icone:"🕷️",
+   desc:"Não constrói teia; vive em gramados e jardins.",
+   sintomas:["Acidentes não graves: dor local leve em menos de 20% dos casos"],
+   onde:"Serviço de saúde mais próximo"},
+  {nome:"Caranguejeira", cientifico:"Mygalomorphae", grupo:"aranhas", icone:"🕷️",
+   desc:"Pernas longas com duas garras e corpo com cerdas.",
+   sintomas:["Acidentes não graves","Irritação por pelos urticantes"],
+   onde:"Serviço de saúde mais próximo"},
+  {nome:"Escorpião-amarelo", cientifico:"Tityus serrulatus", grupo:"escorpioes", icone:"🦂",
+   desc:"Pouco agressivo, hábitos noturnos; vive em pilhas de madeira, entulho, sob pedras e dentro de casas. O mais perigoso do grupo.",
+   sintomas:["Dor local em ardor/queimação e coceira","Em casos moderados/graves (sobretudo crianças): febre ou corpo gelado, suor, náuseas, vômitos","Salivação, arritmias, falta de ar e agitação"],
+   onde:"UPA — Unidade de Pronto Atendimento"},
+  {nome:"Escorpião-marrom", cientifico:"Tityus bahiensis", grupo:"escorpioes", icone:"🦂",
+   desc:"Noturno; encontrado em pilhas de madeira, cercas, entulho e sob pedras.",
+   sintomas:["Dor local em ardor/queimação","Sintomas sistêmicos menos frequentes que no amarelo"],
+   onde:"UPA — Unidade de Pronto Atendimento"},
+  {nome:"Escorpião-preto", cientifico:"Bothriurus bonariensis", grupo:"escorpioes", icone:"🦂",
+   desc:"Hábitos noturnos; vive sob pedras e troncos podres, próximo a construções.",
+   sintomas:["Veneno de baixa toxicidade: dor local e hipersensibilidade"],
+   onde:"Serviço de saúde mais próximo"},
+  {nome:"Lagarta Lonomia", cientifico:"Lonomia obliqua", grupo:"outros", icone:"🐛",
+   desc:"Lagarta venenosa que vira mariposa; cerdas espinhudas com veneno. Mais frequente de novembro a abril, em troncos de árvores, em grupos camuflados.",
+   sintomas:["Dor em queimação, vermelhidão e inchaço","Mal-estar, dor de cabeça, náuseas e dor muscular","Hemorragias entre 8 e 72h (manchas escuras, sangramento por nariz, gengivas e urina)","Casos graves: insuficiência renal e morte"],
+   tratamento:"Levar IMEDIATAMENTE ao hospital. Lavar com água fria e elevar o membro.",
+   onde:"Hospital Municipal de Foz do Iguaçu (24h)"},
+  {nome:"Lagartas urticantes", cientifico:"Megalopyge sp", grupo:"outros", icone:"🐛",
+   desc:"De 1 a 8 cm, com \"pelos\" dorsais longos e sedosos que escondem cerdas urticantes.",
+   sintomas:["Dor local intensa em queimação","Inchaço, vermelhidão e prurido","Raramente náuseas e vômito; dor some em ~1h"],
+   tratamento:"Lavar com água fria, elevar o membro; medicação só com médico.",
+   onde:"Serviço de saúde mais próximo"},
+  {nome:"Sapo", cientifico:"Família Bufonidae", grupo:"outros", icone:"🐸",
+   desc:"Tem glândulas de veneno atrás dos olhos, mas o veneno só é liberado se a glândula for comprimida. Urina de sapo NÃO cega — mito. Não jogue sal: eles respiram pela pele e o sal sufoca com dor.",
+   sintomas:["Deixe-o em paz — defesa apenas contra predadores"],
+   onde:"—"},
+  {nome:"Vespas", cientifico:"Ordem Hymenoptera", grupo:"outros", icone:"🐝",
+   desc:"Ferrão com veneno que causa reação local e, em alguns casos, alérgica.",
+   sintomas:["Dor aguda, vermelhidão, prurido e edema","Possível reação alérgica, dor de cabeça e vertigem","Calafrios, agitação e opressão no peito"],
+   tratamento:"Retirar o ferrão por raspagem (não pinçar); tratamento médico.",
+   onde:"Serviço de saúde mais próximo"}
+];
+
+const GRUPOS = [
+  {id:"todas", label:"Todas"}, {id:"cobras", label:"🐍 Cobras"},
+  {id:"aranhas", label:"🕷️ Aranhas"}, {id:"escorpioes", label:"🦂 Escorpiões"},
+  {id:"outros", label:"🐛 Outros"}
+];
+
+const QUIZ = [
+  {p:"Ao presenciar uma picada de cobra, o primeiro passo é:",
+   ops:["Matar a cobra e levá-la ao hospital","Afastar-se da cobra e manter a vítima deitada e calma","Dar um remédio para dor","Fazer um garrote"],
+   c:1, exp:"Afastar-se evita a segunda picada; manter a vítima calma e imóvel retarda a circulação do veneno."},
+  {p:"Fazer torniquete (garrote) na picada:",
+   ops:["Ajuda a segurar o veneno","É o procedimento correto","NUNCA deve ser feito — piora o quadro","Só em casos graves"],
+   c:2, exp:"O garrote concentra o veneno no membro e agrava a necrose. Nunca faça."},
+  {p:"O tratamento eficaz para picada de cobra é:",
+   ops:["Chupar o veneno","Soro antiofídico no hospital, gratuito pelo SUS","Pó de café na ferida","Remédio caseiro"],
+   c:1, exp:"Somente o soro antiofídico, aplicado no hospital, neutraliza o veneno — e é gratuito pelo SUS."},
+  {p:"Como reconhecer uma cascavel:",
+   ops:["Pelo guizo/chocalho na cauda","Pelos anéis coloridos","Pela língua preta","Pelo desenho de cruz na cabeça"],
+   c:0, exp:"O chocalho/guizo na cauda é a marca da cascavel. Anéis coloridos = coral; cruz na cabeça = urutu."},
+  {p:"A lagarta Lonomia é encontrada geralmente:",
+   ops:["Dentro de casas","Em troncos de árvores, em grupos camuflados","Na água","Em teias nos cantos"],
+   c:1, exp:"Ela vive em troncos e é mais frequente entre novembro e abril."},
+  {p:"\"Urina de sapo cega\" é:",
+   ops:["Verdade","Mito — não há esse perigo","Depende da espécie","Só com sapos grandes"],
+   c:1, exp:"É um mito popular. O veneno do sapo fica em glândulas atrás dos olhos e só sai se comprimido."}
+];
+
+// ============================================================
+// ===== COMPONENTES ===== (funções que geram HTML)
+// ============================================================
+const cardAtalho = (icone, titulo, texto, rota) =>
+  `<a class="card" href="#${rota}" style="text-decoration:none;color:inherit">
+     <div class="icone">${icone}</div><h3>${titulo}</h3><p>${texto}</p></a>`;
+
+const btnTel = (tel, label, extra="") =>
+  `<a class="btn btn-vermelho btn-grande ${extra}" href="tel:${tel}">${label}</a>`;
+
+function cardAnimal(a){
+  const sintomas = a.sintomas.map(s=>`<li>${s}</li>`).join("");
+  const tag = a.naoPeconhenta ? '<span class="tag nao-peconhenta">não peçonhenta</span>' : '<span class="tag">peçonhenta</span>';
+  const trat = a.tratamento ? `<p><strong>Tratamento:</strong> ${a.tratamento}</p>` : "";
+  const onde = a.onde !== "—" ? `<div class="onde">🏥 <strong>Onde procurar atendimento:</strong> ${a.onde}</div>` : "";
+  return `<details data-nome="${a.nome.toLowerCase()} ${a.cientifico.toLowerCase()}">
+    <summary>${a.icone} <strong>${a.nome}</strong> <em style="font-weight:400;font-size:.85rem">(${a.cientifico})</em>${tag}</summary>
+    <div class="corpo">
+      <p>${a.desc}</p>
+      ${a.sintomas.length && !a.naoPeconhenta ? `<p><strong>Sintomas:</strong></p><ul>${sintomas}</ul>` : `<ul>${sintomas}</ul>`}
+      ${trat}${onde}
+    </div></details>`;
+}
+
+// ============================================================
+// ===== VIEWS ===== (uma função por rota)
+// ============================================================
+const viewInicio = () => `
+  <section>
+    <div class="hero">
+      <h1>🐍🛡️ Iguaçu Seguro</h1>
+      <p>Prevenção e primeiros socorros em acidentes com animais peçonhentos na Região do Iguaçu.</p>
+      <p style="font-size:.9rem">Baseado no guia do Projeto Onças do Iguaçu (ICMBio/WWF-Brasil) e no app Animais Peçonhentos do Ministério da Saúde.</p>
+    </div>
+    <div class="alerta">⚠️ Em caso de picada, procure atendimento médico <strong>imediatamente</strong> — o soro antiofídico é o tratamento eficaz e é gratuito pelo SUS.</div>
+    <div class="grid">
+      ${cardAtalho("🚑","Emergência","Telefones de socorro e rede de atendimento.","/emergencia")}
+      ${cardAtalho("🩹","Primeiros Socorros","O que fazer — e o que nunca fazer — em uma picada.","/socorros")}
+      ${cardAtalho("🛡️","Prevenção","Cuidados no mato, em casa e com aranhas e escorpiões.","/prevencao")}
+      ${cardAtalho("🐍","Animais da Região","19 espécies com busca e filtro por grupo.","/animais")}
+      ${cardAtalho("🎯","Quiz","Teste seus conhecimentos e salve seu recorde.","/quiz")}
+      ${cardAtalho("💉","Soro Antiofídico","Como o soro é produzido, em 6 passos.","/soro")}
+    </div>
+  </section>`;
+
+const viewEmergencia = () => `
+  <section>
+    <h2>🚑 Emergência</h2>
+    <p>Em caso de acidente, contate imediatamente o <strong>SAMU 192</strong> ou o <strong>Corpo de Bombeiros 193</strong>.</p>
+    <div class="grid">
+      <div class="card">${btnTel("192","📞 SAMU 192")}<p class="fonte">Serviço de Atendimento Móvel de Urgência</p></div>
+      <div class="card">${btnTel("193","🚒 Bombeiros 193")}<p class="fonte">Corpo de Bombeiros</p></div>
+      <div class="card">
+        ${btnTel("+554535211951","🏥 Hospital Municipal 24h")}
+        <p><strong>Hospital Municipal Padre Germano Lauck</strong></p>
+        <p class="fonte">Rua Adoniran Barbosa, 370, Jd. das Bandeiras — Foz do Iguaçu<br>
+        Tel. 3521-1951 · Emergências 3521-1998 / 3521-1809 · Atendimento 24h<br>
+        <strong>Referência para acidentes com cobras e lagarta Lonomia.</strong></p>
+      </div>
+      <div class="card"><h3>🏥 UPA</h3><p>Unidade de Pronto Atendimento — referência para acidentes com <strong>aranhas e escorpiões</strong>.</p></div>
+    </div>
+    <p>💊 O atendimento e o tratamento são realizados na Rede SUS de forma <strong>gratuita</strong>.</p>
+    <p>☎️ Consulte o <a href="https://www.gov.br/saude/pt-br/assuntos/saude-de-a-a-z/a/animais-peconhentos/ciatox" target="_blank" rel="noopener">Centro de Informação e Assistência Toxicológica (CIATox)</a> da sua região.</p>
+  </section>`;
+
+const viewSocorros = () => `
+  <section>
+    <h2>🩹 Primeiros Socorros — Picada de Cobra</h2>
+    <h3>✅ O que fazer</h3>
+    <ol class="passos">
+      <li><strong>Afaste-se da cobra</strong> para evitar uma segunda picada.</li>
+      <li>Se possível, <strong>fotografe a cobra</strong> ou memorize a aparência para relatar no hospital — nunca tente capturá-la.</li>
+      <li>A vítima deve ficar <strong>deitada e o mais calma possível</strong> — não andar, não correr (isso acelera a circulação do veneno).</li>
+      <li>Manter a vítima <strong>hidratada</strong>, com pequenos goles de água.</li>
+      <li><strong>Remover anéis, pulseiras e roupas apertadas</strong> do membro picado (o inchaço é esperado).</li>
+      <li>Procurar o <strong>hospital o mais rápido possível</strong> — só o médico pode prescrever o soro adequado.</li>
+    </ol>
+    <h3 style="margin-top:1.2rem">🚫 O que NUNCA fazer</h3>
+    <ul class="nunca">
+      <li>Nunca "chupar" o local da picada para tirar o veneno</li>
+      <li>Nunca fazer torniquete ou garrote — piora muito o quadro</li>
+      <li>Nunca cortar o local da picada</li>
+      <li>Não colocar folhas, pó de café ou qualquer substância na ferida</li>
+      <li>Não oferecer bebidas alcoólicas</li>
+      <li>Não dar medicamento por conta própria (nem analgésicos sem orientação)</li>
+    </ul>
+  </section>`;
+
+const viewPrevencao = () => `
+  <section>
+    <h2>🛡️ Prevenção</h2>
+    <div class="grid">
+      <div class="card"><h3>🌲 No mato / campo</h3><ul class="sim">
+        <li>Olhe bem onde pisa; use perneiras ou botas que protejam o tornozelo</li>
+        <li>Nunca mexa em cobras, nem com galhos</li>
+        <li>Se a cobra estiver em movimento, deixe-a seguir — não passe na frente</li>
+        <li>Cuidado com cobras que parecem mortas (podem estar paradas)</li>
+        <li>Ao pegar lenha, use ferramenta — nunca a mão</li>
+        <li>Atenção em troncos de árvores (Lonomia)</li>
+        <li>Cuidado onde coloca as mãos: buracos, pedras, pilhas de madeira</li>
+      </ul></div>
+      <div class="card"><h3>🏠 Em casa / quintal</h3><ul class="sim">
+        <li>Não acumule tralhas, entulho, folhas, palha, madeira ou grama cortada</li>
+        <li>Cuide do lixo e restos de comida que atraem ratos e insetos (alimento das cobras)</li>
+        <li>Feche portas, janelas e frestas; tampe buracos no alicerce e paredes</li>
+        <li>No verão e época seca, cuidado com água acumulada</li>
+        <li>Não deixe crianças brincarem perto de possíveis esconderijos</li>
+        <li>💡 Dica: a vibração do cortador de grama ligado afasta cobras — ligue-o antes de trabalhar no quintal</li>
+      </ul></div>
+      <div class="card"><h3>🕷️ Aranhas e escorpiões</h3><ul class="sim">
+        <li>Sacuda sapatos e roupas antes de vestir; verifique roupas de cama</li>
+        <li>Cuidado ao mexer em enxadas, pás, madeira e pedras empilhadas</li>
+        <li>Use luvas em serviços de jardinagem</li>
+        <li>Cuidado em bananeiras e folhagens (aranha-armadeira)</li>
+      </ul></div>
+      <div class="card"><h3>🐸 Sapos</h3><ul class="sim">
+        <li>O veneno fica em glândulas atrás dos olhos e só sai se comprimida</li>
+        <li>"Urina de sapo cega" é mito</li>
+        <li>Não jogue sal — eles respiram pela pele e o sal sufoca com dor</li>
+        <li>Deixe-os em paz</li>
+      </ul></div>
+    </div>
+  </section>`;
+
+const viewAnimais = () => `
+  <section>
+    <h2>🐍 Animais da Região</h2>
+    <input id="busca" type="search" placeholder="🔍 Buscar por nome ou nome científico…" aria-label="Buscar animal">
+    <div class="filtros" role="group" aria-label="Filtrar por grupo">
+      ${GRUPOS.map((g,i)=>`<button data-grupo="${g.id}" class="${i===0?"ativo":""}">${g.label}</button>`).join("")}
+    </div>
+    <div id="lista-animais"></div>
+  </section>`;
+
+const viewQuiz = () => `
+  <section>
+    <h2>🎯 Teste seus conhecimentos</h2>
+    <p>6 perguntas sobre prevenção e primeiros socorros. Responda e veja o feedback na hora!</p>
+    <div class="placar" id="recorde"></div>
+    <div class="card" id="quiz-area"></div>
+  </section>`;
+
+const viewSoro = () => `
+  <section>
+    <h2>💉 Como o soro antiofídico é produzido</h2>
+    <ol class="timeline">
+      <li data-n="1"><strong>Extração e liofilização</strong> — o veneno é retirado da cobra e liofilizado.</li>
+      <li data-n="2"><strong>Imunização do cavalo</strong> — o veneno diluído (antígeno) é aplicado no cavalo para induzir a produção de anticorpos.</li>
+      <li data-n="3"><strong>Coleta</strong> — após um período, o sangue é retirado do cavalo.</li>
+      <li data-n="4"><strong>Separação do plasma</strong> — o plasma, rico em anticorpos, é separado do sangue.</li>
+      <li data-n="5"><strong>Purificação</strong> — o plasma é purificado industrialmente e se torna o soro (antiveneno).</li>
+      <li data-n="6"><strong>Soros específicos</strong> — cada tipo de cobra tem veneno próprio: são necessários soros distintos ou combinações.</li>
+    </ol>
+  </section>`;
+
+const viewRede = () => `
+  <section>
+    <h2>🏥 Rede de Atendimento</h2>
+    <div class="grid">
+      <div class="card"><h3>Hospital Municipal Padre Germano Lauck</h3>
+        <p>Rua Adoniran Barbosa, 370, Jd. das Bandeiras — Foz do Iguaçu</p>
+        <p class="fonte">Tel. 3521-1951 · Emergências 3521-1998 / 3521-1809 · 24h</p>
+        <p class="fonte">Referência para acidentes com <strong>cobras e Lonomia</strong>.</p>
+        ${btnTel("+554535211951","📞 Ligar")}</div>
+      <div class="card"><h3>UPA</h3><p>Unidade de Pronto Atendimento — referência para <strong>aranhas e escorpiões</strong>.</p></div>
+      <div class="card"><h3>Links oficiais</h3>
+        <p>• <a href="https://www.gov.br/saude/pt-br/assuntos/saude-de-a-a-z/a/animais-peconhentos/ciatox" target="_blank" rel="noopener">CIATox — Centros de Assistência Toxicológica</a></p>
+        <p>• <a href="https://www.gov.br/saude/pt-br/assuntos/saude-de-a-a-z/a/animais-peconhentos/hospitais-de-referencia" target="_blank" rel="noopener">Hospitais de Referência para soroterapia</a></p></div>
+    </div>
+    <div class="card"><h3>💡 Curiosidades</h3><ul class="sim">
+      <li>O risco de morrer em acidente de carro é <strong>400x maior</strong> que por picada de cobra</li>
+      <li>Cobras ficam na delas — acidentes acontecem quando se mexe com elas</li>
+      <li>Os anéis do chocalho da cascavel indicam trocas de pele, não a idade</li>
+      <li>Onças-pintadas comem cobras e ajudam a controlar as populações — <strong>Projeto Onças do Iguaçu</strong>: tel. (45) 3521-3830 · WhatsApp (45) 9.9809-7698</li>
+    </ul></div>
+  </section>`;
+
+// ============================================================
+// ===== ROUTER ===== (navegação SPA por hash)
+// ============================================================
+const ROTAS = {
+  "/inicio": viewInicio, "/emergencia": viewEmergencia, "/socorros": viewSocorros,
+  "/prevencao": viewPrevencao, "/animais": viewAnimais, "/quiz": viewQuiz,
+  "/soro": viewSoro, "/rede": viewRede
+};
+
+function rotear(){
+  const caminho = location.hash.slice(1) || "/inicio";
+  const view = ROTAS[caminho] || viewInicio;
+  document.getElementById("app").innerHTML = view();
+  window.scrollTo({top:0});
+  document.querySelectorAll("nav a").forEach(a =>
+    a.classList.toggle("ativo", a.dataset.rota === caminho));
+  if(caminho === "/animais") iniciarGaleria();
+  if(caminho === "/quiz") iniciarQuiz();
+}
+window.addEventListener("hashchange", rotear);
+
+// ============================================================
+// ===== FUNCIONALIDADES =====
+// ============================================================
+// --- Galeria: busca em tempo real + filtro por grupo ---
+let grupoAtivo = "todas";
+function iniciarGaleria(){
+  const lista = document.getElementById("lista-animais");
+  const busca = document.getElementById("busca");
+  const render = () => {
+    const termo = (busca?.value || "").toLowerCase();
+    const filtrados = ANIMAIS.filter(a =>
+      (grupoAtivo === "todas" || a.grupo === grupoAtivo) &&
+      (a.nome.toLowerCase().includes(termo) || a.cientifico.toLowerCase().includes(termo)));
+    lista.innerHTML = filtrados.length
+      ? filtrados.map(cardAnimal).join("")
+      : `<p style="text-align:center;padding:2rem">Nenhum animal encontrado para "${termo}".</p>`;
+  };
+  busca?.addEventListener("input", render);
+  document.querySelectorAll(".filtros button").forEach(b =>
+    b.addEventListener("click", () => {
+      grupoAtivo = b.dataset.grupo;
+      document.querySelectorAll(".filtros button").forEach(x => x.classList.toggle("ativo", x === b));
+      render();
+    }));
+  render();
+}
+
+// --- Quiz: feedback imediato + recorde em localStorage ---
+function iniciarQuiz(){
+  const area = document.getElementById("quiz-area");
+  const recordeEl = document.getElementById("recorde");
+  const recorde = localStorage.getItem("iguacu-seguro-recorde") || 0;
+  recordeEl.textContent = recorde > 0 ? `🏆 Seu recorde: ${recorde}/6` : "";
+  let atual = 0, acertos = 0;
+
+  const mostrar = () => {
+    if(atual >= QUIZ.length){
+      if(acertos > Number(recorde)){
+        localStorage.setItem("iguacu-seguro-recorde", acertos);
+        recordeEl.textContent = `🏆 Novo recorde: ${acertos}/6!`;
+      }
+      area.innerHTML = `<div class="placar">Você acertou ${acertos} de ${QUIZ.length}! 🎉</div>
+        <p style="text-align:center">${acertos >= 5 ? "Excelente! Você está preparado." : "Revise as seções de Socorros e Prevenção e tente de novo."}</p>
+        <p style="text-align:center;margin-top:1rem"><button class="btn" onclick="location.reload()">🔄 Refazer quiz</button></p>`;
+      return;
+    }
+    const q = QUIZ[atual];
+    area.innerHTML = `<p><strong>Pergunta ${atual+1} de ${QUIZ.length}</strong></p>
+      <p style="margin:.6rem 0">${q.p}</p>
+      ${q.ops.map((op,i)=>`<button class="quiz-op" data-i="${i}">${op}</button>`).join("")}
+      <div id="feedback"></div>`;
+    area.querySelectorAll(".quiz-op").forEach(btn =>
+      btn.addEventListener("click", () => {
+        const i = Number(btn.dataset.i);
+        area.querySelectorAll(".quiz-op").forEach((b,j) => {
+          b.disabled = true;
+          if(j === q.c) b.classList.add("certa");
+          else if(j === i) b.classList.add("errada");
+        });
+        if(i === q.c) acertos++;
+        document.getElementById("feedback").innerHTML =
+          `<div class="alerta" style="margin-top:.8rem">${i === q.c ? "✅" : "❌"} ${q.exp}</div>
+           <p style="text-align:center"><button class="btn" id="prox">${atual === QUIZ.length-1 ? "Ver resultado" : "Próxima →"}</button></p>`;
+        document.getElementById("prox").addEventListener("click", () => { atual++; mostrar(); });
+      }));
+  };
+  mostrar();
+}
+
+// --- Tema claro/escuro salvo ---
+function alternarTema(){
+  const atual = document.documentElement.dataset.theme === "dark" ? "light" : "dark";
+  document.documentElement.dataset.theme = atual;
+  localStorage.setItem("iguacu-seguro-tema", atual);
+}
+(function temaInicial(){
+  const salvo = localStorage.getItem("iguacu-seguro-tema") ||
+    (matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light");
+  document.documentElement.dataset.theme = salvo;
+})();
+
+// --- Menu hambúrguer + voltar ao topo ---
+document.getElementById("menuBtn").addEventListener("click", () =>
+  document.getElementById("nav").classList.toggle("aberto"));
+document.getElementById("nav").addEventListener("click", e => {
+  if(e.target.tagName === "A") document.getElementById("nav").classList.remove("aberto");
+});
+const btnTopo = document.getElementById("topo");
+window.addEventListener("scroll", () =>
+  btnTopo.style.display = window.scrollY > 400 ? "block" : "none");
+btnTopo.addEventListener("click", () => window.scrollTo({top:0, behavior:"smooth"}));
+
+// --- Início ---
+rotear();
+</script>
+</body>
+</html>
+🚀 Comandos para publicar no GitHub
+codigo-gerado.sh
+Código bash
+Depois, ative o GitHub Pages em Settings → Pages → Deploy from a branch → main / (root). O site ficará disponível em https://SEU-USUARIO.github.io/iguacu-seguro/ — sem custo e sem backend, atendendo ao requisito da atividade.
+
+Resumindo
+
+O README.md cobre identidade, funcionalidades, rotas, tecnologias, execução local, publicação e roadmap de evolução.
+O index.html é a SPA completa: router por hash, galeria com busca/filtro, quiz com recorde salvo, tema claro/escuro e botões de emergência.
+A publicação via GitHub Pages exige apenas o push e a ativação nas configurações do repositório.
+Se quiser, posso: adicionar um arquivo LICENSE (MIT), criar um .gitignore, ou incluir um badge de deploy e seção de screenshots no README.
+
+separe o código em arquivos...
+
+
+ONE Smart
+Perfeito — vou separar a SPA em arquivos modulares, deixando o projeto mais fácil de manter e evoluir no semestre. Cada arquivo tem uma responsabilidade clara, permitindo depois migrar os dados para um JSON via fetch sem reescrever tudo.
+
+📁 Nova estrutura do projeto
+iguacu-seguro/
+├── index.html            # Estrutura da página + carregamento dos arquivos
+├── css/
+│   └── styles.css        # Todo o visual (tema claro/escuro, responsividade)
+├── js/
+│   ├── dados.js          # Dados: ANIMAIS, GRUPOS, QUIZ (prontos p/ virar JSON)
+│   ├── componentes.js    # Funções que geram HTML: cardAtalho, btnTel, cardAnimal
+│   ├── views.js          # Uma função por rota (viewInicio, viewAnimais...)
+│   ├── router.js         # Roteamento por hash (#/inicio, #/animais...)
+│   └── app.js            # Funcionalidades: busca, quiz, tema, menu + inicialização
+└── README.md             # Documentação (atualizada para a versão modular)
+Os scripts são carregados em ordem (dados → componentes → views → router → app). Isso faz o projeto funcionar até abrindo o index.html direto no navegador, sem servidor — ideal para o laboratório. Futuramente, dá para migrar para módulos ES (import/export) quando servir via HTTP.
+
+📄 index.html
+codigo-gerado.html
+Código html
+🎨 css/styles.css
+codigo-gerado.css
+Código css
+🗂️ js/dados.js
+codigo-gerado.js
+Código javascript
+🧩 js/componentes.js
+codigo-gerado.js
+Código javascript
+🖥️ js/views.js
+codigo-gerado.js
+Código javascript
+🧭 js/router.js
+codigo-gerado.js
+Código javascript
+⚙️ js/app.js
+codigo-gerado.js
+Código javascript
+📄 README.md (atualizado para a versão modular)
+codigo-gerado.md
+Código markdown
+A separação em arquivos permite evoluir o projeto no semestre sem quebrar o que já funciona: trocar dados.js por um JSON vindo de uma API, adicionar novas rotas criando apenas uma view, ou reutilizar os componentes em novas telas.
+
+🛠️ Tecnologias
+HTML5, CSS3 e JavaScript puro (vanilla) — sem frameworks, sem CDNs, sem backend;
+Dados estáticos em constantes (prontos para migrar para JSON/API);
+localStorage para preferências do usuário (tema e recorde).
+🚀 Como rodar localmente
+Você pode abrir o index.html direto no navegador ou servir a pasta com:
+
+codigo-gerado.sh
+Código bash
+🌐 Publicação no GitHub Pages
+Faça push do projeto para um repositório no GitHub;
+Em Settings → Pages, em Source, selecione Deploy from a branch;
+Escolha a branch main e a pasta / (root);
+Acesse https://SEU-USUARIO.github.io/iguacu-seguro/.
+🧩 Roadmap sugerido
+ Migrar dados para animais.json consumido via fetch;
+ Migrar para módulos ES (import/export) ao servir via HTTP;
+ Mapa/geolocalização da rede de saúde;
+ Alertas sazonais (ex.: Lonomia entre novembro e abril);
+ Transformar em PWA (funcionamento offline para área rural).
+📚 Fontes
+Projeto Onças do Iguaçu — Parque Nacional do Iguaçu (ICMBio / WWF-Brasil / CENAP);
+Ministério da Saúde — aplicativo 
+Animais Peçonhentos (conteúdo sob licença CC BY-ND 3.0 BR);
+CIATox — Centros de Informação e Assistência Toxicológica.
+📄 Licença
+Código sob licença MIT. Conteúdo informativo baseado nas fontes oficiais citadas acima.
+
+
+Resumindo
+- A SPA agora está dividida em 6 arquivos com responsabilidades separadas: página (`index.html`), visual (`styles.css`), dados (`dados.js`), componentes (`componentes.js`), views (`views.js`), router e funcionalidades (`router.js` + `app.js`).
+- A ordem de carregamento dos scripts garante que funcione até abrindo o arquivo direto no navegador, sem servidor.
+- O README foi atualizado com a nova estrutura e o roadmap de evolução.
+
+Se quiser, posso:
+- Gerar o arquivo `LICENSE` (MIT) e um `.gitignore`
+- Adicionar um recurso novo, como alertas sazonais para a Lonomia (nov–abr)
+- Criar o arquivo `animais.json` separado para você ver como seria a migração para API
+Nenhum arquivo escolhido
+O que posso fazer por você?
+
+
+
+ONE Smart
+
+codigo-gerado.html
+html
+
+html
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Iguaçu Seguro — Guia de prevenção de acidentes com animais peçonhentos na Região do Iguaçu (PR).">
+<title>Iguaçu Seguro — Prevenção de Acidentes com Animais Peçonhentos</title>
+<link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+<header>
+  <div class="nav">
+    <a class="logo" href="#/inicio"><span>🐍</span> Iguaçu Seguro</a>
+    <button id="menuBtn" aria-label="Abrir menu">☰</button>
+    <nav id="nav">
+      <ul>
+        <li><a href="#/inicio" data-rota="/inicio">Início</a></li>
+        <li><a href="#/emergencia" data-rota="/emergencia">Emergência</a></li>
+        <li><a href="#/socorros" data-rota="/socorros">Socorros</a></li>
+        <li><a href="#/prevencao" data-rota="/prevencao">Prevenção</a></li>
+        <li><a href="#/animais" data-rota="/animais">Animais</a></li>
+        <li><a href="#/quiz" data-rota="/quiz">Quiz</a></li>
+        <li><a href="#/soro" data-rota="/soro">Soro</a></li>
+        <li><a href="#/rede" data-rota="/rede">Rede</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<main id="app"></main>
+
+<div class="barra-emergencia" aria-label="Emergência">
+  <a href="tel:192">📞 SAMU 192</a>
+  <a href="tel:193">🚒 Bombeiros 193</a>
+</div>
+<button id="topo" aria-label="Voltar ao topo">↑</button>
+
+<footer>
+  <p><strong>Iguaçu Seguro</strong> — material informativo e educativo. Não substitui avaliação médica.</p>
+  <p>Fontes: Projeto Onças do Iguaçu (ICMBio/WWF-Brasil/CENAP) · App <a href="https://miniapps.saude.gov.br/animais-peconhentos/" target="_blank" rel="noopener">Animais Peçonhentos</a> — Ministério da Saúde (CC BY-ND 3.0 BR)</p>
+</footer>
+
+<!-- Ordem de carregamento: dados → componentes → views → router → app -->
+<script src="js/dados.js"></script>
+<script src="js/componentes.js"></script>
+<script src="js/views.js"></script>
+<script src="js/router.js"></script>
+<script src="js/app.js"></script>
+</body>
+</html>
