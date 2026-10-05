@@ -1,0 +1,37 @@
+name: CI
+
+# Gatilho: executa automaticamente a cada push e pull request na main
+on:
+  push:
+    branches: [ "main" ]
+  pull_request:
+    branches: [ "main" ]
+  workflow_dispatch:   # permite execução manual pela aba Actions
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      # ETAPA 1 — CHECKOUT
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      # ETAPA 2 — DEPENDÊNCIAS
+      - name: Configurar Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+
+      - name: Instalar dependências
+        run: npm ci
+
+      # ETAPA 3 — BUILD (validação da SPA)
+      - name: Build — validar estrutura do projeto
+        run: |
+          test -f src/index.html
+          test -f src/css/styles.css
+          test -f src/js/app.js
+          echo "✅ Estrutura da SPA OK"
+
+      - name: Build — validar sintaxe do JavaScript
+        run: npm run build
